@@ -7,6 +7,7 @@
 * [PCM Generic wiki](https://lmdz-forge.lmd.jussieu.fr/mediawiki/Planets/index.php/Overview_of_the_Generic_PCM)
 * [Example configurations wiki](https://lmdz-forge.lmd.jussieu.fr/mediawiki/Planets/index.php/Other_GCM_Configurations_worth_knowing_about)
 * [Downloadable example configurations](https://web.lmd.jussieu.fr/~lmdz/planets/generic/)
+* [PCM/LMD publications](https://www-mars.lmd.jussieu.fr/pubplaneto/pub.html)
 * [Docker build help](https://docs.docker.com/engine/reference/commandline/build/)
 * [Docker run help](https://docs.docker.com/engine/reference/commandline/run/)
 
