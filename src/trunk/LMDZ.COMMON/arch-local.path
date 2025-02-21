@@ -1,0 +1,15 @@
+ROOT=$PWD
+
+NETCDF_HOME=$(nf-config --prefix)
+
+NETCDF_LIBDIR="-L$NETCDF_HOME/lib64"
+NETCDF_LIB="-lnetcdf -lnetcdff"
+NETCDF_INCDIR="-I$NETCDF_HOME/include -I$NETCDF_HOME/lib64/gfortran/modules"
+
+IOIPSL_INCDIR="-I$HOME/trunk/IOIPSL/inc"
+IOIPSL_LIBDIR="-L$HOME/trunk/IOIPSL/lib"
+IOIPSL_LIB="-lioipsl"
+
+XIOS_INCDIR="-I$ROOT/../XIOS/inc"
+XIOS_LIBDIR="-L$ROOT/../XIOS/lib"
+XIOS_LIB="-lxios -lstdc++"

@@ -26,14 +26,18 @@ RUN svn co --revision HEAD http://svn.lmd.jussieu.fr/Planeto/trunk --depth empty
     svn update LMDZ.COMMON LMDZ.GENERIC DOC
 
 # --- Update PCM architecture config ---
-COPY src/install_ioipsl_gfortran.bash /home/app/trunk/LMDZ.COMMON/ioipsl
-COPY src/arch-local.env /home/app/trunk/LMDZ.COMMON/arch
-COPY src/arch-local.path /home/app/trunk/LMDZ.COMMON/arch
-COPY src/arch-local.fcm /home/app/trunk/LMDZ.COMMON/arch
+COPY src/trunk/LMDZ.COMMON/install_ioipsl_gfortran.bash /home/app/trunk/LMDZ.COMMON/ioipsl
+COPY src/trunk/LMDZ.COMMON/arch-local.env /home/app/trunk/LMDZ.COMMON/arch
+COPY src/trunk/LMDZ.COMMON/arch-local.path /home/app/trunk/LMDZ.COMMON/arch
+COPY src/trunk/LMDZ.COMMON/arch-local.fcm /home/app/trunk/LMDZ.COMMON/arch
 
 # --- Install IOIPSL ---
 RUN cd /home/app/trunk/LMDZ.COMMON/ioipsl && \
     bash install_ioipsl_gfortran.bash
 
+# --- Copy files + dirs ---
+COPY src/runs /home/app/runs
+COPY src/rootdatadir /home/app/rootdatadir
+COPY src/startfiles/ /home/app/startfiles
 COPY src/test-earth-aqua.sh .
 COPY src/test-mars.sh .
